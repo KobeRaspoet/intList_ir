@@ -8,9 +8,13 @@ class intListTest {
 
 	@Test
 	void test() {
-		int[] test = new int[] {1,2,3,4,5};
-		intList xs = new intList(test);
-		
+		//int[] test = new int[] {1,2,3,4,5};
+		intList xs = new intList(); 
+		xs.addInt(1);
+		xs.addInt(2);
+		xs.addInt(3);
+		xs.addInt(4);
+		xs.addInt(5);
 		assertArrayEquals(
 				new int[] {1,2,3,4,5}, xs.toIntArray()
 				);

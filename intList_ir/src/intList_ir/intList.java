@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
  * 
  * @immutable
  */
-public class intList {
+public class intList { 
 	/**
 	 * @representationObject
 	 */
@@ -41,13 +41,9 @@ public class intList {
 	}
 	
 	/**
-	 * @pre | numbers != null
-	 * @mutates | this
-	 * @post | Arrays.equals(toIntArray(), numbers)
+	 * @post | length() == 0
 	 */
-	public intList(int[] numbers) {
-		integers = numbers.clone();
-	}
+	public intList() {}
 	
 	/**
 	 * @pre | 0<= number
