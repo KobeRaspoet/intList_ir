@@ -3,8 +3,10 @@ package intList_ir;
 import java.util.stream.IntStream;
 
 /**
- * Each instance of this class represents a sequence of integers.
+ * Each instance of this class stores a sequence of integers.
  * 
+ * @invar | toIntArray() != null
+ * @invar | length() == toIntArray().length
  */
 public class intList { 
 	
@@ -27,11 +29,26 @@ public class intList {
 	
 	/**
 	 * @invar | hasLength(first, length)
-	 * @representationObject
+	 * @invar | 0 <= length
 	 */
 	private Node first;
 	private int length;
 	
+	/**
+	 * 
+	 * @representationObjects
+	 */
+	private Node[] getNodes() {
+		Node[] nodes = new Node[length+1];
+		int i = 0;
+		Node n = first;
+		while(i <= length) {
+			nodes[i] = n;
+			n = n.next;
+			i++;
+		}
+		return nodes;
+	}
 	/**
 	 * @inspects | this
 	 * @post | result == toIntArray().length

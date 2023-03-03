@@ -35,10 +35,10 @@ class intListTest {
 		assertEquals(6, xs.length());
 		
 		xs.deleteLast();
-		//assertEquals(5, xs.length());
-		//assertArrayEquals(
-		//		new int[] {1,2,3,4,5}, xs.toIntArray()
-		//		);
+		assertEquals(5, xs.length());
+		assertArrayEquals(
+				new int[] {1,2,3,4,5}, xs.toIntArray()
+				);
 	}
 
 }
